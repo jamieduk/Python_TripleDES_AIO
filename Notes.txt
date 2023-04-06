@@ -3,6 +3,9 @@ TripleDES Python3 Encryption (c)J~Net 2023
 jnet.sytes.net
 
 
+git clone https://github.com/jamieduk/Python_TripleDES_AIO.git
+
+
 Make executable and run
 
 sudo chmod +x *.py
@@ -13,5 +16,7 @@ To run
 ./aio.py
 
 
+See menu choose option!
 
+share your generated key and encrypted.txt to secure comms partner for them to decrypt.
 
