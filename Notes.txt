@@ -1,0 +1,17 @@
+TripleDES Python3 Encryption (c)J~Net 2023
+
+jnet.sytes.net
+
+
+Make executable and run
+
+sudo chmod +x *.py
+
+
+To run
+
+./aio.py
+
+
+
+
