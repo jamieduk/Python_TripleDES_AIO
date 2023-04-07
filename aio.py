@@ -12,7 +12,7 @@ def generate_key():
     key=Random.get_random_bytes(24)
     with open("key.txt", "wb") as key_file:
         key_file.write(key)
-    print("Key generated successfully.")
+    print("Key Generated Successfully.")
 
 def get_key():
     if not os.path.exists("key.txt"):
@@ -34,17 +34,17 @@ def encrypt_message():
         return
     with open(message_file, "rb") as f:
         message=f.read()
-    message_length = len(message)
-    padding_length = 8 - (message_length % 8)
-    padding = bytes([padding_length]) * padding_length
-    padded_message = message + padding
+    message_length=len(message)
+    padding_length=8 - (message_length % 8)
+    padding=bytes([padding_length]) * padding_length
+    padded_message=message + padding
     iv=Random.get_random_bytes(8)
     cipher=DES3.new(key, DES3.MODE_CBC, iv)
     ciphertext=cipher.encrypt(padded_message)
     with open("encrypted.txt", "wb") as f:
         f.write(iv)
         f.write(ciphertext)
-    print("Encryption complete.")
+    print("Encryption Complete.")
 
 
 def decrypt_message():
@@ -52,7 +52,7 @@ def decrypt_message():
     if key is None:
         return
     if not os.path.exists("encrypted.txt"):
-        print("Encrypted message not found.")
+        print("Encrypted Message Not Found.")
         return
     with open("encrypted.txt", "rb") as f:
         iv=f.read(8)
@@ -61,7 +61,7 @@ def decrypt_message():
     plaintext=cipher.decrypt(ciphertext)
     with open("decrypted.txt", "wb") as f:
         f.write(plaintext)
-    print("Decryption complete.")
+    print("Decryption Complete.")
 
 while True:
     print("==============================")
@@ -81,5 +81,5 @@ while True:
     elif choice == "4":
         break
     else:
-        print("Invalid choice. Please enter a number from 1 to 4.")
+        print("Invalid Choice. Please Enter A Number From 1 to 4.")
 
