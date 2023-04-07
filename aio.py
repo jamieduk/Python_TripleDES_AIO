@@ -12,11 +12,11 @@ def generate_key():
     key=Random.get_random_bytes(24)
     with open("key.txt", "wb") as key_file:
         key_file.write(key)
-    print("Key Generated Successfully.")
+    print("🔐 Key Generated Successfully.")
 
 def get_key():
     if not os.path.exists("key.txt"):
-        print("Key not found. Please generate a key first.")
+        print("Key Not Found. Please Generate A Key First.")
         return
     with open("key.txt", "rb") as key_file:
         key=key_file.read()
@@ -44,7 +44,7 @@ def encrypt_message():
     with open("encrypted.txt", "wb") as f:
         f.write(iv)
         f.write(ciphertext)
-    print("Encryption Complete.")
+    print("🔐 Encryption Complete.")
 
 
 def decrypt_message():
@@ -67,7 +67,7 @@ while True:
     print("==============================")
     print("TripleDES Encryption Menu")
     print("==============================")
-    print("1. Generate Key")
+    print("1. 🔐 Generate Key")
     print("2. Encrypt Message")
     print("3. Decrypt Message")
     print("4. Exit")
