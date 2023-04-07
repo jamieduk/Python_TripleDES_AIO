@@ -61,15 +61,15 @@ def decrypt_message():
     plaintext=cipher.decrypt(ciphertext)
     with open("decrypted.txt", "wb") as f:
         f.write(plaintext)
-    print("Decryption Complete.")
+    print("🔓 Decryption Complete.")
 
 while True:
     print("==============================")
     print("TripleDES Encryption Menu")
     print("==============================")
-    print("1. 🔐 Generate Key")
-    print("2. Encrypt Message")
-    print("3. Decrypt Message")
+    print("1. 🔑 Generate Key")
+    print("2. 🔏 Encrypt Message")
+    print("3. 🔓 Decrypt Message")
     print("4. Exit")
     choice=input("Enter Your Choice (1-4): ")
     if choice == "1":
