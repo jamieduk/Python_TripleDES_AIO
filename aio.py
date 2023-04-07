@@ -26,11 +26,11 @@ def encrypt_message():
     key=get_key()
     if key is None:
         return
-    message_file=input("Enter the message file to encrypt (default message.txt): ")
+    message_file=input("Enter The Message File To Encrypt (default message.txt): ")
     if message_file == "":
         message_file="message.txt"
     if not os.path.exists(message_file):
-        print("Message file not found.")
+        print("Message File Not Found!")
         return
     with open(message_file, "rb") as f:
         message=f.read()
@@ -67,11 +67,11 @@ while True:
     print("==============================")
     print("TripleDES Encryption Menu")
     print("==============================")
-    print("1. Generate key")
-    print("2. Encrypt message")
-    print("3. Decrypt message")
+    print("1. Generate Key")
+    print("2. Encrypt Message")
+    print("3. Decrypt Message")
     print("4. Exit")
-    choice=input("Enter your choice (1-4): ")
+    choice=input("Enter Your Choice (1-4): ")
     if choice == "1":
         generate_key()
     elif choice == "2":
