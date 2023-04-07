@@ -12,7 +12,7 @@ def generate_key():
     key=Random.get_random_bytes(24)
     with open("key.txt", "wb") as key_file:
         key_file.write(key)
-    print("🔐 Key Generated Successfully.")
+    print("🔑 Key Generated Successfully.")
 
 def get_key():
     if not os.path.exists("key.txt"):
